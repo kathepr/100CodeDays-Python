@@ -32,4 +32,23 @@ random.shuffle(seleccion)
 
 #Uno los elementos de la lista y la paso a cadena de caracteres para hacer la contraseña
 password = ''.join(seleccion)
-print(f"Here is your password: {password}")
+print(f"Here is your password #1: {password}")
+
+
+
+
+#OTRA FORMA DE HACERLO - MAS SIMPLIFICADA Y SENCILLA
+seleccion2 = []
+
+for char in range(1,total_letters+1):
+    seleccion2 += random.choice(letters) # Escoge una opción random de la lista, como está en un loop, esto sucederá hasta que se cumpla el rango del loop.
+
+for char in range(1,total_symbols+1):
+    seleccion2 += random.choice(symbols)
+
+for char in range(1,total_numbers+1):
+    seleccion2 += random.choice(numbers)
+
+random.shuffle(seleccion2) #Mezclo el orden de la lista
+password2 = ''.join(seleccion2) #Convierto la lista a cadena
+print(f"Here is your password #2: {password2}\n")
